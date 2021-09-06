@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
           decoration: InputDecoration(
             hintText: 'email@example.com',
             labelText: 'Email Address',
-            //errorText: snapshot.error,
+            errorText: snapshot.error?.toString(),
           ),
           onChanged: (newTextInputValue) {
             bloc.changeEmail(newTextInputValue);
@@ -60,7 +60,7 @@ class LoginScreen extends StatelessWidget {
           obscureText: true,
           decoration: InputDecoration(
             labelText: 'Password',
-            //errorText: snapshot.error,
+            errorText: snapshot.error?.toString(),
           ),
           onChanged: (newTextInputValue) {
             bloc.changePassword(newTextInputValue);
